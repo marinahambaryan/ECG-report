@@ -4,7 +4,8 @@ import path from "path";
 
 export async function DELETE() {
   try {
-    const uploadDir = path.join(process.cwd(), "uploads");
+    // const uploadDir = path.join(process.cwd(), "uploads");
+    const uploadDir = "/tmp/uploads";
 
     // Check if directory exists
     if (!fs.existsSync(uploadDir)) {
@@ -16,7 +17,7 @@ export async function DELETE() {
 
     // Delete all files in the uploads directory
     fs.readdirSync(uploadDir).forEach((file) => {
-    const filePath = path.join(uploadDir, file);
+      const filePath = path.join(uploadDir, file);
       fs.unlinkSync(filePath); // Delete each file
     });
 

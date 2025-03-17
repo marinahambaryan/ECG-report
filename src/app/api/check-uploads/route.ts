@@ -4,7 +4,9 @@ import path from "path";
 
 export async function GET() {
   try {
-    const uploadDir = path.join(process.cwd(), "uploads");
+    const uploadDir = "/tmp/uploads";
+
+    // const uploadDir = path.join(process.cwd(), "uploads");
 
     // Check if directory exists
     if (!fs.existsSync(uploadDir)) {
