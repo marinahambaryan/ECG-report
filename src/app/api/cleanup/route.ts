@@ -1,12 +1,10 @@
 import { NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
+import { uploadDir } from "@/app/lib/utils";
 
 export async function DELETE() {
   try {
-    // const uploadDir = path.join(process.cwd(), "uploads");
-    const uploadDir = "/tmp/uploads";
-
     // Check if directory exists
     if (!fs.existsSync(uploadDir)) {
       return NextResponse.json(

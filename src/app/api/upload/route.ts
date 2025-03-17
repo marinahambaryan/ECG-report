@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
+import { uploadDir } from "@/app/lib/utils";
 
 export async function POST(req: Request) {
   try {
@@ -15,8 +16,6 @@ export async function POST(req: Request) {
     }
 
     // Ensure uploads directory exists
-    // const uploadDir = path.join(process.cwd(), "uploads");
-    const uploadDir = "/tmp/uploads";
 
     if (!fs.existsSync(uploadDir)) {
       fs.mkdirSync(uploadDir, { recursive: true });

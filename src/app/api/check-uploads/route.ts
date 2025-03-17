@@ -1,13 +1,9 @@
 import { NextResponse } from "next/server";
 import fs from "fs";
-// import path from "path";
+import { uploadDir } from "@/app/lib/utils";
 
 export async function GET() {
   try {
-    const uploadDir = "/tmp/uploads";
-
-    // const uploadDir = path.join(process.cwd(), "uploads");
-
     // Check if directory exists
     if (!fs.existsSync(uploadDir)) {
       return NextResponse.json({ filesExist: false });
