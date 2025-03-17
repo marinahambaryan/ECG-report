@@ -1,11 +1,9 @@
 import { NextResponse } from "next/server";
-import tesseract from "tesseract.js";
 import fs from "fs";
-import path from "path";
 
 async function extractTextFromECG(filePath: string) {
   try {
-    const text = "extractTextFromECG";
+    const text = `extractTextFromECG ${filePath}`;
     return text;
   } catch (error) {
     console.error("OCR Error:", error);
@@ -15,6 +13,7 @@ async function extractTextFromECG(filePath: string) {
 
 function vectorizeECGData(rawText: string) {
   // Simulated vectorization from extracted text
+  console.log({ rawText });
   return {
     lead_1: [0.12, 0.18, -0.04, 0.09],
     lead_2: [0.15, 0.17, -0.03, 0.08],
@@ -25,6 +24,7 @@ function vectorizeECGData(rawText: string) {
 }
 
 function generateAIInterpretation(vectorizedData: any) {
+  console.log({ vectorizedData });
   // Simulated AI-generated human-readable interpretation
   return {
     interpretation:
@@ -63,6 +63,7 @@ export async function POST(req: Request) {
 
     return NextResponse.json({ success: true, vectorizedData, aiResponse });
   } catch (error) {
+    console.error("Processing:", error);
     return NextResponse.json({ error: "Processing failed" }, { status: 500 });
   }
 }

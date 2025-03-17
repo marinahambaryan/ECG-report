@@ -40,7 +40,7 @@ export default function SecurityPage() {
       </h2>
       <p className="text-lg text-gray-800 mt-4">
         <strong>RBAC restricts access</strong> to ECG reports based on the
-        user's role:
+        user&apos;s role:
       </p>
       <pre className="bg-black text-white p-4 rounded-md overflow-x-auto">
         {`{

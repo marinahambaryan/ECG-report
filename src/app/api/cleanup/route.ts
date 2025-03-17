@@ -16,7 +16,7 @@ export async function DELETE() {
 
     // Delete all files in the uploads directory
     fs.readdirSync(uploadDir).forEach((file) => {
-      const filePath = path.join(uploadDir, file);
+    const filePath = path.join(uploadDir, file);
       fs.unlinkSync(filePath); // Delete each file
     });
 

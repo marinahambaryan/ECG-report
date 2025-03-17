@@ -6,7 +6,7 @@ export default function UserUpload() {
       </h2>
       <p className="text-lg text-gray-800 mt-4">
         <strong>1️⃣ User selects an ECG PDF/Image.</strong> <br />
-        <strong>2️⃣ Clicks "Upload"</strong> → Sends a{" "}
+        <strong>2️⃣ Clicks &quot;Upload&quot;</strong> → Sends a{" "}
         <strong>POST request</strong> to{" "}
         <strong>Next.js API (`/api/upload`)</strong>. <br />
         <strong>3️⃣ API validates the file & checks security</strong> before

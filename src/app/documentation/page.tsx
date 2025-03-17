@@ -9,7 +9,7 @@ export default function Documentation() {
       </h1>
 
       <p className="text-lg text-gray-800 mb-6">
-        This documentation explains the system's{" "}
+        This documentation explains the system&apos;s{" "}
         <strong>
           architecture, AI model strategy, and implementation details
         </strong>

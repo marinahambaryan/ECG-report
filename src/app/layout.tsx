@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -30,22 +31,22 @@ export default function RootLayout({
         <div className="min-h-screen bg-white text-black">
           {/* Navigation Bar */}
           <nav className="flex justify-between items-center p-6 border-b border-black shadow-sm">
-            <a
+            <Link
               href="/"
               className="text-2xl font-bold tracking-wider hover:text-gray-600 transition"
             >
               ECG Analyzer
-            </a>
+            </Link>
             <div className="space-x-6">
-              <a href="/" className="text-lg hover:text-gray-600 transition">
+              <Link href="/" className="text-lg hover:text-gray-600 transition">
                 Upload
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/documentation"
                 className="text-lg hover:text-gray-600 transition"
               >
                 Docs
-              </a>
+              </Link>
             </div>
           </nav>
 
